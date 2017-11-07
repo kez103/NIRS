@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >
+<html>
+	<head>
+	<base href="https://acs.alfabank.ru" /><meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+			<style type="text/css">
+				@import url('/acs/style?type=auth');
+			</style>
+			<script type="text/javascript" src="/acs/js/jquery-compat-git.min.js"><!--
+			//--></script>
+			<script type="text/javascript" src="/acs/js/acs.js"><!--
+			//--></script>
+	</head>
+
+	<body onload="setPageTitle('MasterCard SecureCode');setWindowCloseHandler();focusOnPasswordInput('pwdInputMasked');focusOnPasswordInput('pwdInputVisible');markInputAsNumeric('pwdInputVisible',true);setTimerResendPassword('true','31')" onkeypress="handleKeyPress(event, 'submitPasswordButton');"><span id="tabCloseNotice" style="display: none;">If you leave or close the page/tab, your purchase will be declined.</span><div id="mainContainer" style="width: 100%; vertical-align: middle; text-align: center;"><div id="formContainer" class="formContainer" style="margin: 0 auto;">
+<form id="authForm" name="authForm" method="post" action="/acs/pages/enrollment/custom/alfa/authentication.jsf;jsessionid=_QOBv2ODzRU0hQzw9s5WmgOapAL4TgR5t24LuMa_0ROwaY9vHtjZ!-832019760" enctype="application/x-www-form-urlencoded" onsubmit="removeWindowCloseHandler();">
+<input type="hidden" name="authForm" value="authForm" />
+
+			<!-- id="request_id" must be equal to ThreeDsSessionControlFilter.ACCT_ID_PARAM_NAME constant!!! --><input id="request_id" type="hidden" name="request_id" value="121718349Ri4TH3VAvpmd9Pl6JJL" /><div id="imageGridContainer" class="imageGridContainer"><table id="imageGrid" class="imageGrid" cellpadding="1" cellspacing="1">
+<tbody>
+<tr>
+<td class="bankLogoColumn textAlignLeft ">
+				<img src="/acs/logoimage?type=bank" alt="Member logo" title="Alfa Bank" class="bankLogoImageClass" /></td>
+<td class=" systemLogoColumn textAlignRight">
+				<img src="/acs/logoimage?type=sc" alt="MasterCard SecureCode" title="MasterCard SecureCode" class="systemLogoImageClass" /></td>
+</tr>
+</tbody>
+</table>
+</div><div id="formNameContainer" class="formNameContainer"><span class="formName">Подтверждение оплаты</span></div><div id="tipContainer" class="tipContainer"><span class="tip">Пожалуйста, проверьте корректность реквизитов платежа.</span></div><div id="errorContainer" class="errorContainer"></div><div id="paymentDataContainer" class="paymentDataContainer"><table id="paymentDataTable" class="paymentDataTable" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="labelColumn">Интернет-магазин:</td>
+<td class=" valueColumn">Tinkoff Bank</td>
+</tr>
+<tr>
+<td class="labelColumn">Номер карты:</td>
+<td class=" valueColumn">************7741</td>
+</tr>
+<tr>
+<td class="labelColumn">Сумма платежа:</td>
+<td class=" valueColumn">130.00 RUB</td>
+</tr>
+<tr>
+<td class="labelColumn">Дата и время:</td>
+<td class=" valueColumn">2017-11-03 14:58:43</td>
+</tr>
+</tbody>
+</table>
+</div><div id="passDataContainer" class="passDataContainer"><table id="passDataTable" class="paymentDataTable" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="labelColumn"><span class="tip2">Сообщение с одноразовым паролем и реквизитами платежа отправлено на номер <b>+79*******20</b></span></td>
+</tr>
+<tr>
+<td class="labelColumn"><table id="passButDataTable" class="buttonGrid" cellpadding="0" cellspacing="0">
+<thead>
+<tr><th class="tipContainer" colspan="2" scope="colgroup"><span class="passwordLabel">Введите пароль и подтвердите оплату</span></th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="buttonGridLeftColumn "><div class="passwordInputContainer"><input id="pwdInputVisible" type="text" name="pwdInputVisible" autocomplete="off" class="passwordInput" title="Attempt 1 of 3" /></div></td>
+<td class=" buttonGridRightColumn"><div id="buttonGridContainer" class="buttonGridContainer"><div id="sendButtonContainer" class="sendButtonContainer">
+								<!-- send password button and dummy -->
+
+								<!-- confirm password button and dummy --><input id="submitPasswordButton" type="submit" name="submitPasswordButton" value="Подтвердить" title="Attempt 1 of 3" class="confirmButton" onclick="if (onAuthenticationSubmitButtonPress()) {disablePressedButtonAndShowDummy(this, 'submitPasswordButtonDummy'); return true;} else {return false;}" /><input id="submitPasswordButtonDummy" type="submit" name="submitPasswordButtonDummy" value="Подтвердить" style="display: none;" class="confirmButton" onclick="return false;" /></div></div></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class="labelColumn"><span id="repeat_id" class="tip" style="display: none; font-size: 12px"></span>
+<script type="text/javascript" src="/acs/javax.faces.resource/jsf.js.jsf?ln=javax.faces"></script>
+<a id="resendPasswordLink" href="#" title="2 password send attempt(s) left" onclick="jsf.util.chain(this,event,'removeWindowCloseHandler(); disablePressedButtonAndShowDummy(this, null);','mojarra.jsfcljs(document.getElementById(\'authForm\'),{\'resendPasswordLink\':\'resendPasswordLink\'},\'\')');return false" class="resendPasswordLink">Получить пароль повторно</a></td>
+</tr>
+</tbody>
+</table>
+</div><div id="customFooterContainer" class="customFooterContainer"><div class="b-info"><p class="b-info__title">Изменить номер телефона для отправки сообщений, Вы можете:</p><div class="b-info-block"><div class="b-info-block__title"><a class="b-link b-link_type_pseudo" onclick="showTip(this, '1')"><span class="b-link__text">Для карт частных лиц (если подключена услуга «Альфа-Чек»)</span></a></div><div id="1" style="display: none"><ul><li>С помощью интернет-банка <a href="http://click.alfabank.ru/" target="_blank">«Альфа-Клик»</a> (меню «Подключение услуг»).</li><li>С помощью телефонного центра «Альфа-Консультант» по телефонам<nobr class="phone">+7 495 788-88-78</nobr> (для Москвы) или <nobr class="phone">8 800 200-00-00</nobr> (для регионов России).</li></ul></div></div><div class="b-info-block"><div class="b-info-block__title"><a class="b-link b-link_type_pseudo" onclick="showTip(this, '2')"><span class="b-link__text">Для карт частных лиц (если услуга «Альфа-Чек» не подключена, но подключена услуга «Альфа-Клик»)</span></a></div><div id="2" style="display: none"><ul><li>В одном из банкоматов Альфа-Банка (меню «Прочие операции»).</li><li>В любом отделении Альфа-Банка.</li></ul></div></div><div class="b-info-block"><div class="b-info-block__title"><a class="b-link b-link_type_pseudo" onclick="showTip(this, '3')"><span class="b-link__text">Для карт юридических лиц и индивидуальных предпринимателей</span></a></div><div id="3" style="display: none"><ul><li>В отделении Альфа-Банка, в котором открыт Ваш счет.</li><li>Направив заявление в электронном виде по  системе  <nobr><a href="https://ibank.alfabank.ru/" target="_blank">«Альфа-Клиент On-line»</a>.</nobr></li></ul></div></div></div></div><table class="helpCancelGrid">
+<tbody>
+<tr>
+<td></td>
+<td class=" buttonGridLeftColumn "><div id="helpContainer" class="helpContainer"><table id="helpTable" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="helpImageColumn "><div id="helpImageContainer" class="helpImageContainer">
+				<img src="/acs/logoimage?type=help_image" title="Help" class="helpImageClass" onclick="window.open('http://www.mastercard.us/securecode.html','','width=1000,height=700, location=no, menubar=no, toolbar=no, resizable=yes', true ); return false;" /></div></td>
+<td class=" helpLinkColumn"><div id="helpLinkContainer" class="helpLinkContainer">
+				<a class="helpLink" href="http://www.mastercard.us/securecode.html" onclick="window.open('http://www.mastercard.us/securecode.html','','width=1000,height=700, location=no, menubar=no, toolbar=no, resizable=yes', true ); return false;">Help
+				</a></div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+<td class=" buttonGridRightColumn"><div id="cancelLinkContainer" class="helpContainer"><table id="cancelTable" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="helpImageColumn "><div id="cancelImageContainer" class="helpImageContainer">
+					<img src="/acs/logoimage?type=cancel_image" title="Отменить оплату" class="helpImageClass" onclick="  if (false) {   removeWindowCloseHandler();   return true;  }  if (confirm('Are you sure you want to cancel? Your purchase will be declined. Click &quot;Cancel&quot; to continue your purchase.')) {   removeWindowCloseHandler(); disablePressedButtonAndShowDummy(this, null);  } else {   return false;  }" immediate="true" /></div></td>
+<td class=" helpLinkColumn"><a href="#" onclick="jsf.util.chain(this,event,'if (false) {   removeWindowCloseHandler();   return true;  }  if (confirm(\'Are you sure you want to cancel? Your purchase will be declined. Click &quot;Cancel&quot; to continue your purchase.\')) {   removeWindowCloseHandler(); disablePressedButtonAndShowDummy(this, null);  } else {   return false;  }','mojarra.jsfcljs(document.getElementById(\'authForm\'),{\'j_id46\':\'j_id46\'},\'\')');return false" class="cancelLink">Отменить оплату</a></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="" autocomplete="off" />
+</form></div></div>
+	</body>
+</htm
